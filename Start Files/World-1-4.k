@@ -5,3 +5,5 @@
  * function to make Karel check for potholes
  * autonomously. 
  */
+
+import "turns";
