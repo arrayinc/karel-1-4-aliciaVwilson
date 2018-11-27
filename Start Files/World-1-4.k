@@ -7,3 +7,32 @@
  */
 
 import "turns";
+
+function FillPotholes(){
+	while(frontIsClear()){
+		fillPothole();
+		move();
+	}
+
+	fillPothole();
+}
+
+function fillPothole(){
+	if(rightIsClear()){
+		turnRight();
+		move();
+		if(noBeepersPresent()){
+			putBeeper();
+		}
+		turnAround();
+		move();
+		turnRight();
+	}
+}
+
+function returnToStart(){
+	turnAround();
+	repeat(6){
+		move();
+	}
+}
